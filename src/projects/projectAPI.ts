@@ -41,7 +41,6 @@ function delay(ms: number) {
   };
 }
 
-
 function convertToProjectModels(data: any[]): Project[] {
   let projects: Project[] = data.map(convertToProjectModel);
   return projects;
@@ -63,6 +62,13 @@ const projectAPI = {
           'There was an error retrieving the projects. Please try again.'
         );
       });
+  },
+
+  find(id: number): Promise<Project> {
+    return fetch(`${url}/${id}`)
+      .then(checkStatus)
+      .then(parseJSON)
+      .then(convertToProjectModel);
   },
 
   put(project: Project) {
