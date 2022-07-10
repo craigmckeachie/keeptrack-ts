@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProjectCard /> snapshot 1`] = `
+<div
+  className="card"
+>
+  <img
+    alt="Mission Impossible"
+    src=""
+  />
+  <section
+    className="section dark"
+  >
+    <a
+      href="/projects/1"
+      onClick={[Function]}
+    >
+      <h5
+        className="strong"
+      >
+        <strong>
+          Mission Impossible
+        </strong>
+      </h5>
+      <p>
+        This is really difficult...
+      </p>
+      <p>
+        Budget : 
+        100
+      </p>
+    </a>
+    <button
+      aria-label="edit Mission Impossible"
+      className=" bordered"
+      onClick={[Function]}
+    >
+      <span
+        className="icon-edit "
+      />
+      Edit
+    </button>
+  </section>
+</div>
+`;
