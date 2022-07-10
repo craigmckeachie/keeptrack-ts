@@ -8,8 +8,12 @@ import {
 
 import './App.css';
 import HomePage from './home/HomePage';
-import ProjectPage from './projects/ProjectPage';
-import ProjectsPage from './projects/ProjectsPage';
+
+// import ProjectsPage from './projects/ProjectsPage';
+const ProjectsPage = React.lazy(() => import('./projects/ProjectsPage'));
+
+// import ProjectPage from './projects/ProjectPage';
+const ProjectPage = React.lazy(() => import('./projects/ProjectPage'));
 
 function App() {
   return (
@@ -29,8 +33,22 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/projects/:id" element={<ProjectPage />} />
+          <Route
+            path="/projects"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <ProjectsPage />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/projects/:id"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <ProjectPage />
+              </React.Suspense>
+            }
+          />
         </Routes>
       </div>
     </Router>
