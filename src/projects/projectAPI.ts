@@ -1,4 +1,5 @@
 import { Project } from './Project';
+
 const baseUrl = 'http://localhost:4000';
 const url = `${baseUrl}/projects`;
 
@@ -40,6 +41,7 @@ function delay(ms: number) {
   };
 }
 
+
 function convertToProjectModels(data: any[]): Project[] {
   let projects: Project[] = data.map(convertToProjectModel);
   return projects;
@@ -59,6 +61,24 @@ const projectAPI = {
         console.log('log client error ' + error);
         throw new Error(
           'There was an error retrieving the projects. Please try again.'
+        );
+      });
+  },
+
+  put(project: Project) {
+    return fetch(`${url}/${project.id}`, {
+      method: 'PUT',
+      body: JSON.stringify(project),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(checkStatus)
+      .then(parseJSON)
+      .catch((error: TypeError) => {
+        console.log('log client error ' + error);
+        throw new Error(
+          'There was an error updating the project. Please try again.'
         );
       });
   },

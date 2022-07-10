@@ -9,28 +9,6 @@ function ProjectsPage() {
   const [error, setError] = useState<string | undefined>(undefined);
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Approach 1: using promise then
-  // useEffect(() => {
-  //   setLoading(true);
-  //   projectAPI
-  //     .get(currentPage)
-  //     .then((data) => {
-  //       setLoading(false);
-  //       if (currentPage === 1) {
-  //         setProjects(data);
-  //       } else {
-  //         setProjects((projects) => [...projects, ...data]);
-  //       }
-  //     })
-  //     .catch((e) => {
-  //       setLoading(false);
-  //       if (e instanceof Error) {
-  //         setError(e.message);
-  //       }
-  //     });
-  // }, [currentPage]);
-
-  // Approach 2: using async/await
   useEffect(() => {
     async function loadProjects() {
       setLoading(true);
@@ -53,10 +31,17 @@ function ProjectsPage() {
   }, [currentPage]);
 
   const saveProject = (project: Project) => {
-    let updatedProjects = projects.map((p: Project) => {
-      return p.id === project.id ? project : p;
-    });
-    setProjects(updatedProjects);
+    projectAPI
+      .put(project)
+      .then((updatedProject) => {
+        let updatedProjects = projects.map((p: Project) => {
+          return p.id === project.id ? project : p;
+        });
+        setProjects(updatedProjects);
+      })
+      .catch((e) => {
+        setError(e.message);
+      });
   };
 
   const handleMoreClick = () => {
