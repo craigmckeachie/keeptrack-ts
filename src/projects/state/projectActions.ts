@@ -15,7 +15,7 @@ import {
 //action creators
 export function loadProjects(
   page: number
-): ThunkAction<void, ProjectState, null, Action<string>> {
+): ThunkAction<Promise<Project[] | Error>, ProjectState, null, Action<string>> {
   return (dispatch: any) => {
     dispatch({ type: LOAD_PROJECTS_REQUEST });
     return projectAPI
@@ -28,22 +28,54 @@ export function loadProjects(
       })
       .catch((error) => {
         dispatch({ type: LOAD_PROJECTS_FAILURE, payload: error });
+        return error;
       });
   };
 }
 
+// export function loadProjects(
+//   page: number
+// ): ThunkAction<void, ProjectState, null, Action<string>> {
+//   return async (dispatch: any) => {
+//     dispatch({ type: LOAD_PROJECTS_REQUEST });
+//     try {
+//       const data = await projectAPI.get(page);
+//       dispatch({
+//         type: LOAD_PROJECTS_SUCCESS,
+//         payload: { projects: data, page },
+//       });
+//     } catch (error) {
+//       dispatch({ type: LOAD_PROJECTS_FAILURE, payload: error });
+//     }
+//   };
+// }
+
+// export function saveProject(
+//   project: Project
+// ): ThunkAction<void, ProjectState, null, Action<string>> {
+//   return (dispatch: any) => {
+//     dispatch({ type: SAVE_PROJECT_REQUEST });
+//     return projectAPI
+//       .put(project)
+//       .then((data) => {
+//         dispatch({ type: SAVE_PROJECT_SUCCESS, payload: data });
+//       })
+//       .catch((error) => {
+//         dispatch({ type: SAVE_PROJECT_FAILURE, payload: error });
+//       });
+//   };
+// }
+
 export function saveProject(
   project: Project
 ): ThunkAction<void, ProjectState, null, Action<string>> {
-  return (dispatch: any) => {
+  return async (dispatch: any) => {
     dispatch({ type: SAVE_PROJECT_REQUEST });
-    return projectAPI
-      .put(project)
-      .then((data) => {
-        dispatch({ type: SAVE_PROJECT_SUCCESS, payload: data });
-      })
-      .catch((error) => {
-        dispatch({ type: SAVE_PROJECT_FAILURE, payload: error });
-      });
+    try {
+      const data = await projectAPI.put(project);
+      dispatch({ type: SAVE_PROJECT_SUCCESS, payload: data });
+    } catch (error) {
+      dispatch({ type: SAVE_PROJECT_FAILURE, payload: error });
+    }
   };
 }
