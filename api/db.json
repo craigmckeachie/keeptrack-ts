@@ -1,16 +1,6 @@
 {
   "projects": [
     {
-      "id": 1,
-      "name": "Johnson - Kutch",
-      "description": "Fully-configurable intermediate framework. Ullam occaecati libero laudantium nihil voluptas omnis qui modi qui.",
-      "imageUrl": "/assets/placeimg_500_300_arch4.jpg",
-      "contractTypeId": 3,
-      "contractSignedOn": "2013-08-04T22:39:41.473Z",
-      "budget": 54637,
-      "isActive": false
-    },
-    {
       "id": 2,
       "name": "Dillesik LLCs",
       "description": "Re-contextualized dynamic moratorium. Aut nulla soluta numquam qui dolor architecto et facere dolores.",
@@ -71,16 +61,6 @@
       "isActive": true
     },
     {
-      "id": 8,
-      "name": "Halvorson, Fadel and Zieme",
-      "description": "Triple-buffered transitional encoding. Amet illum quis expedita ut repudiandae et aut sit quia.",
-      "imageUrl": "/assets/placeimg_500_300_arch1.jpg",
-      "contractTypeId": 5,
-      "contractSignedOn": "2011-10-16T08:07:32.217Z",
-      "budget": 21205,
-      "isActive": true
-    },
-    {
       "id": 9,
       "name": "Lesch - Waelchi",
       "description": "Profound mobile project. Rem consequatur laborum explicabo sint odit et illo voluptas expedita.",
@@ -88,26 +68,6 @@
       "contractTypeId": 3,
       "contractSignedOn": "2016-09-23T21:27:25.035Z",
       "budget": 53407,
-      "isActive": false
-    },
-    {
-      "id": 10,
-      "name": "Kihn and Sons",
-      "description": "Multi-layered grid-enabled local area network. Accusamus numquam neque incidunt perspiciatis consequuntur beatae excepturi iure officiis.",
-      "imageUrl": "/assets/placeimg_500_300_arch3.jpg",
-      "contractTypeId": 4,
-      "contractSignedOn": "2016-04-02T02:40:48.906Z",
-      "budget": 62703,
-      "isActive": false
-    },
-    {
-      "id": 11,
-      "name": "Kreiger Inc",
-      "description": "Profound national matrices. Nam omnis perspiciatis cumque voluptate sequi vel voluptate alias quia.",
-      "imageUrl": "/assets/placeimg_500_300_arch11.jpg",
-      "contractTypeId": 2,
-      "contractSignedOn": "2009-11-20T04:57:43.124Z",
-      "budget": 74262,
       "isActive": false
     },
     {
@@ -451,16 +411,6 @@
       "isActive": true
     },
     {
-      "id": 46,
-      "name": "Bernier and Sons",
-      "description": "User-friendly directional standardization. Temporibus qui laudantium ipsam sapiente ut eum ab omnis quasi.",
-      "imageUrl": "/assets/placeimg_500_300_arch6.jpg",
-      "contractTypeId": 1,
-      "contractSignedOn": "2018-01-17T21:58:28.876Z",
-      "budget": 94076,
-      "isActive": true
-    },
-    {
       "id": 47,
       "name": "Lindgren, Conroy and Beer",
       "description": "Organized maximized function. Laborum voluptate quia temporibus non quo libero doloribus sed dolorum.",
@@ -528,16 +478,6 @@
       "contractTypeId": 2,
       "contractSignedOn": "2015-02-06T11:05:47.787Z",
       "budget": 33629,
-      "isActive": false
-    },
-    {
-      "id": 54,
-      "name": "Anderson LLC",
-      "description": "Diverse incremental algorithm. Expedita laudantium sit quisquam sit nobis eum nam ea natus.",
-      "imageUrl": "/assets/placeimg_500_300_arch10.jpg",
-      "contractTypeId": 2,
-      "contractSignedOn": "2015-01-21T07:03:49.836Z",
-      "budget": 74221,
       "isActive": false
     },
     {
@@ -731,16 +671,6 @@
       "isActive": true
     },
     {
-      "id": 74,
-      "name": "Armstrong, Crona and Ziemann",
-      "description": "Switchable bifurcated task-force. Hic sed at et id et et qui quis dolores.",
-      "imageUrl": "/assets/placeimg_500_300_arch6.jpg",
-      "contractTypeId": 2,
-      "contractSignedOn": "2012-05-15T12:41:51.113Z",
-      "budget": 91566,
-      "isActive": true
-    },
-    {
       "id": 75,
       "name": "Muller - Carroll",
       "description": "Quality-focused maximized initiative. Non nobis fugiat ab et corporis earum suscipit cum et.",
@@ -758,16 +688,6 @@
       "contractTypeId": 4,
       "contractSignedOn": "2011-11-15T11:59:50.377Z",
       "budget": 34611,
-      "isActive": true
-    },
-    {
-      "id": 77,
-      "name": "Abshire and Sons",
-      "description": "Ergonomic mission-critical knowledge user. Consequatur pariatur eos molestiae qui aut dolorem laudantium nesciunt doloribus.",
-      "imageUrl": "/assets/placeimg_500_300_arch6.jpg",
-      "contractTypeId": 6,
-      "contractSignedOn": "2018-08-16T18:49:06.477Z",
-      "budget": 98123,
       "isActive": true
     },
     {
@@ -798,16 +718,6 @@
       "contractTypeId": 3,
       "contractSignedOn": "2013-04-26T03:54:35.005Z",
       "budget": 80627,
-      "isActive": true
-    },
-    {
-      "id": 81,
-      "name": "Beatty, Boehm and West",
-      "description": "Operative high-level emulation. Quos qui dolorum aut voluptatem rerum vel provident necessitatibus dicta.",
-      "imageUrl": "/assets/placeimg_500_300_arch4.jpg",
-      "contractTypeId": 5,
-      "contractSignedOn": "2012-08-09T13:45:53.932Z",
-      "budget": 75030,
       "isActive": true
     },
     {
@@ -941,16 +851,6 @@
       "isActive": true
     },
     {
-      "id": 95,
-      "name": "Armstrong - Hands",
-      "description": "Persistent 3rd generation capability. Sint omnis asperiores voluptas sapiente delectus blanditiis earum ut voluptatem.",
-      "imageUrl": "/assets/placeimg_500_300_arch6.jpg",
-      "contractTypeId": 2,
-      "contractSignedOn": "2010-09-24T21:02:41.601Z",
-      "budget": 38853,
-      "isActive": false
-    },
-    {
       "id": 97,
       "name": "Towne - Altenwerth",
       "description": "Self-enabling 24/7 leverage. Itaque voluptas quisquam illo dolorem tenetur ex et quidem voluptatem.",
@@ -969,6 +869,19 @@
       "contractSignedOn": "2015-03-31T22:18:57.328Z",
       "budget": 81317,
       "isActive": false
+    },
+    {
+      "id": 100
+    },
+    {
+      "imageUrl": "https://www.test.tassuapu.fi/wp-content/uploads/2022/03/kissan-koulutus.jpg",
+      "id": 500,
+      "name": "Another Project",
+      "description": "A project description . Mauris iaculis nunc vitae elit commodo lobortis. Sed dapibus, odio sit amet",
+      "contractTypeId": 1,
+      "isActive": true,
+      "contractSignedOn": "2016-03-15T05:00:00.000Z",
+      "budget": 42344
     }
   ]
 }
