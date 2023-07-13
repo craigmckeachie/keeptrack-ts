@@ -19,7 +19,7 @@ function ProjectList({ projects }: ProjectListProps) {
   };
 
   return (
-    <div className="row">
+    <div className="row flex flex-wrap">
       {projects.map((project) => (
         <div key={project.id} className="cols-sm">
           {project === projectBeingEdited ? (

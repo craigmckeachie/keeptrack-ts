@@ -19,7 +19,7 @@ function ProjectsPage() {
   };
 
   return (
-    <>
+    <div className='mx-12'>
       <h2 className="text-2xl font-bold">Projects</h2>
 
       {data ? (
@@ -69,7 +69,7 @@ function ProjectsPage() {
           </div>
         </div>
       ) : null}
-    </>
+    </div>
   );
 
   // if (data) {
