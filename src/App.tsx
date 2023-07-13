@@ -14,17 +14,25 @@ import ProjectsPage from './projects/ProjectsPage';
 function App() {
   return (
     <Router>
-      <header className="sticky">
-        <span className="logo">
+      <header className="navbar bg-secondary text-secondary-content">
+        <div className=" flex-1">
           <img src="/assets/logo-3.svg" alt="logo" width="49" height="99" />
-        </span>
-        <NavLink to="/" className="button rounded">
-          <span className="icon-home"></span>
-          Home
-        </NavLink>
-        <NavLink to="/projects/" className="button rounded">
-          Projects
-        </NavLink>
+        </div>
+        <div className="flex-none">
+          <ul className="menu menu-horizontal p-4">
+            <li>
+              <NavLink to="/" className="">
+                <span className="icon-home"></span>
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/projects/" className="">
+                Projects
+              </NavLink>
+            </li>
+          </ul>
+        </div>
       </header>
       <div className="container">
         <Routes>

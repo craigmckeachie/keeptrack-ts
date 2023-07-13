@@ -19,25 +19,26 @@ function ProjectCard(props: ProjectCardProps) {
   };
 
   return (
-    <div className="card">
-      <img src={project.imageUrl} alt={project.name} />
-      <section className="section dark">
+    <div className="card  w-96 shadow-xl m-4 bg-neutral-content glass">
+      <figure>
+        <img src={project.imageUrl} alt={project.name} />
+      </figure>
+      <section className="card-body">
         <Link to={'/projects/' + project.id}>
-          <h5 className="strong">
-            <strong>{project.name}</strong>
-          </h5>
+          <h5 className="card-title">{project.name}</h5>
           <p>{formatDescription(project.description)}</p>
           <p>Budget : {project.budget.toLocaleString()}</p>
         </Link>
-        <button
-          className=" bordered"
-          onClick={() => {
-            handleEditClick(project);
-          }}
-        >
-          <span className="icon-edit "></span>
-          Edit
-        </button>
+        <div className="card-actions justify-end">
+          <button
+            className="btn btn-primary"
+            onClick={() => {
+              handleEditClick(project);
+            }}
+          >
+            Edit
+          </button>
+        </div>
       </section>
     </div>
   );
