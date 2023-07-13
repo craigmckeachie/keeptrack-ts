@@ -1,19 +1,25 @@
-@import '../node_modules/mini.css/dist/mini-default.min.css';
+/* the props */
+@import 'https://unpkg.com/open-props';
 
-html,
-body,
-#root,
-.container,
-.center-page {
-  height: 100%;
+/* optional imports that use the props */
+@import 'https://unpkg.com/open-props/normalize.min.css';
+/* @import 'https://unpkg.com/open-props/buttons.min.css'; */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.center-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+:root {
 }
 
-form {
-  min-width: 300px;
+body {
+  font-family: var(--font-sans);
+  margin: 0;
+}
+
+h2 {
+  font-size: var(--font-size-fluid-3);
+  line-height: var(--font-lineheight-1);
 }
