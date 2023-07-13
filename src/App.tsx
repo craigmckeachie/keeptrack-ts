@@ -19,12 +19,9 @@ function App() {
           <img src="/assets/logo-3.svg" alt="logo" width="49" height="99" />
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal p-4">
-            <li>
-              <NavLink to="/" className="">
-                <span className="icon-home"></span>
-                Home
-              </NavLink>
+          <ul className="menu menu-horizontal px-1 font-semibold">
+            <li className="mx-2">
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
               <NavLink to="/projects/" className="">

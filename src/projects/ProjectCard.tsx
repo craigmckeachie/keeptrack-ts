@@ -19,15 +19,19 @@ function ProjectCard(props: ProjectCardProps) {
   };
 
   return (
-    <div className="card  w-96 shadow-xl m-4 bg-neutral-content glass">
+    <div className="card  w-96 shadow-xl m-4 glass">
       <figure>
         <img src={project.imageUrl} alt={project.name} />
       </figure>
       <section className="card-body">
         <Link to={'/projects/' + project.id}>
-          <h5 className="card-title">{project.name}</h5>
-          <p>{formatDescription(project.description)}</p>
-          <p>Budget : {project.budget.toLocaleString()}</p>
+          <h5 className="card-title mb-4">{project.name}</h5>
+          <p className="mb-4 text-neutral-400">
+            {formatDescription(project.description)}
+          </p>
+          <p className="mb-2 badge p-6 badge-ghost">
+            Budget : $ {project.budget.toLocaleString()}
+          </p>
         </Link>
         <div className="card-actions justify-end">
           <button
