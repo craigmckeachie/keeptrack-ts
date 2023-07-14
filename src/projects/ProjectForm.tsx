@@ -75,7 +75,7 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
   }
 
   return (
-    <div className="card w-96 shadow-xl  card-bordered  ">
+    <div className="card w-96 shadow-xl card-bordered glass mr-10 mb-10 min-h-full">
       <section className="card-body">
         <form className="  " onSubmit={handleSubmit}>
           {isLoading && <span className="toast">Saving...</span>}

@@ -19,7 +19,7 @@ function ProjectCard(props: ProjectCardProps) {
   };
 
   return (
-    <div className="card  w-96 shadow-xl m-4 glass">
+    <div className="card w-96 shadow-xl glass mr-10 mb-10">
       <figure>
         <img src={project.imageUrl} alt={project.name} />
       </figure>

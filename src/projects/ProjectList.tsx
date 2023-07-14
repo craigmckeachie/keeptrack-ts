@@ -19,12 +19,12 @@ function ProjectList({ projects }: ProjectListProps) {
   };
 
   return (
-    <div className="">
+    <div className="flex flex-wrap">
       {projects.map((project) => (
-        <div key={project.id} className="cols-sm">
+        <div key={project.id}>
           {project === projectBeingEdited ? (
             <ProjectForm project={project} onCancel={cancelEditing} />
-            ) : (
+          ) : (
             <ProjectCard project={project} onEdit={handleEdit} />
           )}
         </div>

@@ -19,32 +19,32 @@ function ProjectsPage() {
   };
 
   return (
-    <div className='mx-12'>
-      <h2 className="text-2xl font-bold">Projects</h2>
+    <>
+      <h2 className="text-2xl font-bold my-8">Projects</h2>
 
       {data ? (
         <>
           {isFetching && <span className="toast">Refreshing...</span>}
           <ProjectList projects={data} />
-          <div className="row">
-            <div className="col-sm-4">Current page: {page + 1}</div>
-            <div className="col-sm-4">
-              <div className="button-group right">
+          <div>
+            <div>Current page: {page + 1}</div>
+            <div>
+              <div className="btn-group">
                 <button
-                  className="button "
+                  className="btn "
                   onClick={() => setPage((oldPage) => oldPage - 1)}
                   disabled={page === 0}
                 >
                   Previous
                 </button>
                 <button
-                  className="button"
+                  className="btn"
                   onClick={() => {
                     if (!isPreviousData) {
                       setPage((oldPage) => oldPage + 1);
                     }
                   }}
-                  disabled={data.length != 10}
+                  disabled={data.length != 12}
                 >
                   Next
                 </button>
@@ -69,7 +69,7 @@ function ProjectsPage() {
           </div>
         </div>
       ) : null}
-    </div>
+    </>
   );
 
   // if (data) {
