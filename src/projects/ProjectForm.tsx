@@ -75,7 +75,7 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
   }
 
   return (
-    <div className="card w-96 shadow-xl card-bordered glass mr-10 mb-10 min-h-full">
+    <div className="card w-96 bg-white card-bordered glass mr-10 mb-10 min-h-full">
       <section className="card-body">
         <form className="  " onSubmit={handleSubmit}>
           {isLoading && <span className="toast">Saving...</span>}
@@ -147,7 +147,11 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
           </div>
           <div className="card-actions">
             <button className="btn btn-primary">Save</button>
-            <button type="button" className="btn btn-link" onClick={onCancel}>
+            <button
+              type="button"
+              className="btn text-black btn-link"
+              onClick={onCancel}
+            >
               cancel
             </button>
           </div>

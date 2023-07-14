@@ -31,7 +31,7 @@ function App() {
           </ul>
         </div>
       </header>
-      <main className="mx-10">
+      <main className="mx-10 ">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
