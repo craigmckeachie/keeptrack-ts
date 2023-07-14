@@ -17,7 +17,8 @@ module.exports = {
       'aqua',
       'business',
       'black',
-      'winter'
+      'winter',
+      'acid'
     ],
   },
 };

@@ -75,64 +75,85 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
   }
 
   return (
-    <form className="input-group vertical" onSubmit={handleSubmit}>
-      {isLoading && <span className="toast">Saving...</span>}
-      <label htmlFor="name">Project Name</label>
-      <input
-        type="text"
-        name="name"
-        placeholder="enter name"
-        value={project.name}
-        onChange={handleChange}
-      />
-      {errors.name.length > 0 && (
-        <div className="card error">
-          <p>{errors.name}</p>
-        </div>
-      )}
+    <div className="card w-96 shadow-xl  card-bordered  ">
+      <section className="card-body">
+        <form className="  " onSubmit={handleSubmit}>
+          {isLoading && <span className="toast">Saving...</span>}
+          <div className="input-group  input-group-vertical mb-2">
+            <label className="" htmlFor="name">
+              Project Name
+            </label>
+            <input
+              className="form-control input input-bordered"
+              type="text"
+              name="name"
+              placeholder="enter name"
+              value={project.name}
+              onChange={handleChange}
+            />
+            {errors.name.length > 0 && (
+              <div className="card error">
+                <p>{errors.name}</p>
+              </div>
+            )}
+          </div>
 
-      <label htmlFor="description">Project Description</label>
-      <textarea
-        name="description"
-        placeholder="enter description"
-        value={project.description}
-        onChange={handleChange}
-      />
-      {errors.description.length > 0 && (
-        <div className="card error">
-          <p>{errors.description}</p>
-        </div>
-      )}
-
-      <label htmlFor="budget">Project Budget</label>
-      <input
-        type="number"
-        name="budget"
-        placeholder="enter budget"
-        value={project.budget}
-        onChange={handleChange}
-      />
-      {errors.budget.length > 0 && (
-        <div className="card error">
-          <p>{errors.budget}</p>
-        </div>
-      )}
-
-      <label htmlFor="isActive">Active?</label>
-      <input
-        type="checkbox"
-        name="isActive"
-        checked={project.isActive}
-        onChange={handleChange}
-      />
-      <div className="input-group">
-        <button className="primary bordered medium">Save</button>
-        <span />
-        <button type="button" className="bordered medium" onClick={onCancel}>
-          cancel
-        </button>
-      </div>
-    </form>
+          <div className="input-group input-group-vertical mb-2">
+            <label className="form-label" htmlFor="description">
+              Project Description
+            </label>
+            <textarea
+              className="form-control input input-bordered"
+              name="description"
+              placeholder="enter description"
+              value={project.description}
+              onChange={handleChange}
+            />
+            {errors.description.length > 0 && (
+              <div className="card error">
+                <p>{errors.description}</p>
+              </div>
+            )}
+          </div>
+          <div className="input-group input-group-vertical mb-2">
+            <label className="form-label" htmlFor="budget">
+              Project Budget
+            </label>
+            <input
+              className="form-control input file-input-bordered"
+              type="number"
+              name="budget"
+              placeholder="enter budget"
+              value={project.budget}
+              onChange={handleChange}
+            />
+            {errors.budget.length > 0 && (
+              <div className="card error">
+                <p>{errors.budget}</p>
+              </div>
+            )}
+          </div>
+          <div className="input-group input-group-vertical mb-4">
+            <label className="form-label" htmlFor="isActive">
+              Active?
+            </label>
+            <input
+              className="form-control checkbox checkbox"
+              type="checkbox"
+              name="isActive"
+              checked={project.isActive}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="card-actions">
+            <button className="btn btn-primary">Save</button>
+            <button type="button" className="btn btn-link" onClick={onCancel}>
+              cancel
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
   );
 }
 
