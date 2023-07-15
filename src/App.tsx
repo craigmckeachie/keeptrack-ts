@@ -14,9 +14,12 @@ import ProjectsPage from './projects/ProjectsPage';
 function App() {
   return (
     <Router>
-      <header className="navbar bg-secondary text-secondary-content">
+      <header className="navbar bg-secondary text-secondary-content border-b-2 border-b-solid border-b-primary ">
         <div className=" flex-1">
-          <img src="/assets/logo-3.svg" alt="logo" width="49" height="99" />
+          <a href="/" className="nav-army-star">
+            <span>HOME</span>
+          </a>
+          {/* <img src="/assets/logo-3.svg" alt="logo" width="49" height="99" /> */}
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1 font-semibold">

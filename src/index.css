@@ -6,3 +6,17 @@
 h2, h6{
     text-transform: uppercase;
 }
+
+header.navbar  ul.menu a {
+    text-transform: uppercase;
+}
+
+.nav-army-star span {
+    background: transparent url(https://www.army.mil/e2/images/rv7/universal/army_logo_horizontal.svg) no-repeat scroll;
+    display: block;
+    height: 36px;
+    width: 150px;
+}
+.nav-army-star {
+    text-indent: -99999px;
+}
