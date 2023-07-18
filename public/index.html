@@ -30,12 +30,46 @@
       href="https://fonts.googleapis.com/css2?family=Overpass&display=swap"
       rel="stylesheet"
     />
+    <style>
+      html,
+      body,
+      #root,
+      .container,
+      .center-page {
+        height: 100%;
+      }
+
+      .center-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .loading {
+        /* background-color: #dddddd; */
+        background-color: hsl(0, 0%, 87%, .7);
+      }
+
+      #logo {
+        height: 36px;
+        width: 150px;
+        opacity: 80%;
+      }
+    </style>
 
     <title>Army App</title>
   </head>
   <body class="">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div class="center-page loading">
+        <img
+          id="logo"
+          src="https://www.army.mil/e2/images/rv7/universal/army_logo_horizontal.svg"
+          alt=""
+        />
+      </div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
