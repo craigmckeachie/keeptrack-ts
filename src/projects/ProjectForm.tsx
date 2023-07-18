@@ -92,7 +92,7 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
               Project Name
             </label>
             <input
-              className="form-control input input-bordered"
+              className="form-control input input-lg input-bordered"
               type="text"
               name="name"
               placeholder="enter name"
@@ -111,7 +111,7 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
               Project Description
             </label>
             <textarea
-              className="form-control input input-bordered"
+              className="form-control input input-bordered input-lg"
               name="description"
               placeholder="enter description"
               value={project.description}
@@ -123,12 +123,12 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
               </div>
             )}
           </div>
-          <div className="input-group input-group-vertical mb-2">
+          <div className="input-group input-group-vertical mb-2 ">
             <label className="form-label" htmlFor="budget">
               Project Budget
             </label>
             <input
-              className="form-control input file-input-bordered"
+              className="form-control input input-bordered input-lg"
               type="number"
               name="budget"
               placeholder="enter budget"
@@ -146,7 +146,7 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
               Active?
             </label>
             <input
-              className="form-control checkbox"
+              className="form-control checkbox "
               type="checkbox"
               name="isActive"
               checked={project.isActive}
