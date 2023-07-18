@@ -2,21 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
+/* body {
+  font-family: GI, Overpass, Arial, sans-serif;
+} */
 
-h2, h6{
-    text-transform: uppercase;
+h2,
+h6 {
+  text-transform: uppercase;
 }
 
-header.navbar  ul.menu a {
-    text-transform: uppercase;
+/* h2.break,
+h6.break {
+  flex-basis: 100%;
+  height: 0;
+} */
+
+/* h2 {
+  display: inline-block;
+} */
+
+h6.card-title{
+    display: block;
+}
+
+h2:after, h6:after {
+  background: #ffcc01;
+  content: '';
+  display: block;
+  height: 5px;
+  margin: 10px auto 0 0;
+  width: 60px;
+}
+
+/* h2:after,
+.card-title:after {
+  background: #ffcc01;
+  content: '';
+  display: flex;
+  height: 5px;
+  margin: 10px auto 0;
+  width: 60px;
+} */
+
+header.navbar ul.menu a {
+  text-transform: uppercase;
 }
 
 .nav-army-star span {
-    background: transparent url(https://www.army.mil/e2/images/rv7/universal/army_logo_horizontal.svg) no-repeat scroll;
-    display: block;
-    height: 36px;
-    width: 150px;
+  background: transparent
+    url(https://www.army.mil/e2/images/rv7/universal/army_logo_horizontal.svg)
+    no-repeat scroll;
+  display: block;
+  height: 36px;
+  width: 150px;
 }
 .nav-army-star {
-    text-indent: -99999px;
+  text-indent: -99999px;
 }

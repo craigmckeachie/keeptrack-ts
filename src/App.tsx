@@ -21,7 +21,7 @@ function App() {
           </a>
           {/* <img src="/assets/logo-3.svg" alt="logo" width="49" height="99" /> */}
         </div>
-        <div className="flex-none">
+        <div className="flex-none mr-20">
           <ul className="menu menu-horizontal px-1 font-semibold">
             <li className="mx-2">
               <NavLink to="/">Home</NavLink>

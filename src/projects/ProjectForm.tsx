@@ -75,7 +75,7 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
   }
 
   return (
-    <div className="card w-96 bg-white card-bordered glass mr-10 mb-10 min-h-full">
+    <div className="card w-96 bg-gray-200 card-bordered glass mr-10 mb-10 min-h-full">
       <section className="card-body">
         <form className="  " onSubmit={handleSubmit}>
           {isLoading && <span className="toast">Saving...</span>}
@@ -138,18 +138,18 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
               Active?
             </label>
             <input
-              className="form-control checkbox checkbox"
+              className="form-control checkbox"
               type="checkbox"
               name="isActive"
               checked={project.isActive}
               onChange={handleChange}
             />
           </div>
-          <div className="card-actions">
+          <div className="card-actions justify-end">
             <button className="btn btn-primary">Save</button>
             <button
               type="button"
-              className="btn text-black btn-link"
+              className="btn btn-link text-accent"
               onClick={onCancel}
             >
               cancel
