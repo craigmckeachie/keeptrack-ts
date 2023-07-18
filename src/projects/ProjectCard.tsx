@@ -6,6 +6,14 @@ function formatDescription(description: string): string {
   return description.substring(0, 60) + '...';
 }
 
+function formatTitle(title: string, length: number): string {
+  if (title.length <= length) {
+    return title;
+  } else {
+    return title.substring(0, 22) + '...';
+  }
+}
+
 interface ProjectCardProps {
   project: Project;
   onEdit: (project: Project) => void;
@@ -19,15 +27,13 @@ function ProjectCard(props: ProjectCardProps) {
   };
 
   return (
-    <div className="card card-bordered bg-gray-200 w-96  mr-10 mb-10 ">
+    <div className="card card-bordered bg-gray-200 w-96  ">
       <figure>
         <img src={project.imageUrl} alt={project.name} />
       </figure>
       <section className="card-body">
         <Link to={'/projects/' + project.id}>
-          <h6 className="card-title mb-4 ">
-            {project.name}
-          </h6>
+          <h6 className="card-title mb-4 ">{formatTitle(project.name, 24)}</h6>
 
           <p className="mb-4 text-gray-500">
             {formatDescription(project.description)}

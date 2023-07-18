@@ -24,7 +24,13 @@ function ProjectsPage() {
 
       {data ? (
         <>
-          {isFetching && <span className="toast">Refreshing...</span>}
+          {isFetching && (
+            <div className="toast toast-center toast-top ">
+              <div className="alert bg-gray-200">
+                <span>REFRESHING...</span>
+              </div>
+            </div>
+          )}
           <ProjectList projects={data} />
           <div>
             <div>Current page: {page + 1}</div>

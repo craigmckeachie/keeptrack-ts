@@ -52,17 +52,19 @@ function convertToProjectModel(item: any): Project {
 
 const projectAPI = {
   get(page = 1, limit = 12) {
-    return fetch(`${url}?_page=${page}&_limit=${limit}&_sort=name`)
-      .then(delay(2000))
-      .then(checkStatus)
-      .then(parseJSON)
-      .then(convertToProjectModels)
-      .catch((error: TypeError) => {
-        console.log('log client error ' + error);
-        throw new Error(
-          'There was an error retrieving the projects. Please try again.'
-        );
-      });
+    return (
+      fetch(`${url}?_page=${page}&_limit=${limit}&_sort=name`)
+        // .then(delay(2000))
+        .then(checkStatus)
+        .then(parseJSON)
+        .then(convertToProjectModels)
+        .catch((error: TypeError) => {
+          console.log('log client error ' + error);
+          throw new Error(
+            'There was an error retrieving the projects. Please try again.'
+          );
+        })
+    );
   },
 
   find(id: number): Promise<Project> {
@@ -80,6 +82,7 @@ const projectAPI = {
         'Content-Type': 'application/json',
       },
     })
+      .then(delay(2000))
       .then(checkStatus)
       .then(parseJSON)
       .catch((error: TypeError) => {

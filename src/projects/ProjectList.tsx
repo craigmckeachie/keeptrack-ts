@@ -19,7 +19,7 @@ function ProjectList({ projects }: ProjectListProps) {
   };
 
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap gap-6">
       {projects.map((project) => (
         <div key={project.id}>
           {project === projectBeingEdited ? (

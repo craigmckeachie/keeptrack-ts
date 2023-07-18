@@ -75,10 +75,18 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
   }
 
   return (
-    <div className="card w-96 bg-gray-200 card-bordered glass mr-10 mb-10 min-h-full">
+    <div className="card w-96 bg-gray-200 card-bordered glass  min-h-full">
+      {isLoading && (
+        <div className="toast toast-right toast-bottom ">
+          <div className="alert bg-gray-200">
+            <span>SAVING...</span>
+          </div>
+        </div>
+      )}
       <section className="card-body">
         <form className="  " onSubmit={handleSubmit}>
-          {isLoading && <span className="toast">Saving...</span>}
+          {/* {isLoading && <span className="toast">Saving...</span>} */}
+
           <div className="input-group  input-group-vertical mb-2">
             <label className="" htmlFor="name">
               Project Name
