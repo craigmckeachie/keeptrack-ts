@@ -23,13 +23,18 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
               <strong>{project.name}</strong>
             </h3>
             <p className=" text-gray-500 mb-2">{project.description}</p>
-            <p className=" text-gray-500">Budget : {project.budget}</p>
+            <p className=" text-gray-500">
+              <span className="text-gray-800 font-semibold">budget: </span>$
+              {project.budget.toLocaleString()}
+            </p>
 
             <p className=" text-gray-500">
-              Signed: {project.contractSignedOn.toLocaleDateString()}
+              <span className="text-gray-800 font-semibold">signed: </span>{' '}
+              {project.contractSignedOn.toLocaleDateString()}
             </p>
             <p className=" text-gray-500">
-              Status: {project.isActive ? 'active' : 'inactive'}
+              <span className="text-gray-800 font-semibold">status: </span>{' '}
+              {project.isActive ? 'active' : 'inactive'}
             </p>
           </section>
         </div>

@@ -7,6 +7,7 @@
 } */
 
 h2,
+h3,
 h6 {
   text-transform: uppercase;
 }
@@ -21,11 +22,11 @@ h6.break {
   display: inline-block;
 } */
 
-h6.card-title{
+h3.card-title, h6.card-title{
     display: block;
 }
 
-h2:after, h6:after {
+h2:after, h3:after, h6:after {
   background: #ffcc01;
   content: '';
   display: block;
