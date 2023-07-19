@@ -33,7 +33,7 @@ function ProjectCard(props: ProjectCardProps) {
       </figure>
       <section className="card-body">
         <Link to={'/projects/' + project.id}>
-          <h6 className="card-title mb-4 ">{formatTitle(project.name, 24)}</h6>
+          <h6 className="card-title mb-4 text-base">{formatTitle(project.name, 24)}</h6>
 
           <p className="mb-4 text-gray-500">
             {formatDescription(project.description)}

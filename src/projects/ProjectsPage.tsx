@@ -20,7 +20,7 @@ function ProjectsPage() {
 
   return (
     <>
-      <h2 className="text-2xl font-bold my-8">Projects</h2>
+      <h2 className="text-2xl font-extrabold my-8">Projects</h2>
 
       {data ? (
         <>

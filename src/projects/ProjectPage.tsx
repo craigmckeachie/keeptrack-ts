@@ -28,7 +28,7 @@ function ProjectPage(props: any) {
   return (
     <div>
       <>
-        <h1>Project Detail</h1>
+        <h2 className="text-2xl font-extrabold my-8">Project Detail</h2>
 
         {loading && (
           <div className="center-page">
@@ -38,8 +38,8 @@ function ProjectPage(props: any) {
         )}
 
         {error && (
-          <div className="row">
-            <div className="card large error">
+          <div className="">
+            <div className="">
               <section>
                 <p>
                   <span className="icon-alert inverse "></span> {error}
