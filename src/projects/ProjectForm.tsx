@@ -78,7 +78,7 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
     <div className="card w-96 bg-gray-200 card-bordered glass  min-h-full">
       {isLoading && (
         <div className="toast toast-right toast-bottom ">
-          <div className="alert bg-gray-200">
+          <div className="alert bg-white">
             <span>SAVING...</span>
           </div>
         </div>
@@ -153,6 +153,18 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
               onChange={handleChange}
             />
           </div>
+          {/* <div className="input-group input-group-vertical mb-4">
+            <label className="form-label" htmlFor="contractType">
+              Contract Type
+            </label>
+            <select className="form-control select" name="contractType">
+              <option value="">Select...</option>
+              <option value="">Fixed Bid</option>
+              <option value="">Time & Materials</option>
+              <option value="">Value Proposition</option>
+            </select>
+          </div> */}
+
           <div className="card-actions justify-end">
             <button className="btn btn-primary">Save</button>
             <button

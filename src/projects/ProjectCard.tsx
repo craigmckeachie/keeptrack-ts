@@ -27,7 +27,7 @@ function ProjectCard(props: ProjectCardProps) {
   };
 
   return (
-    <div className="card card-bordered bg-gray-200 w-96  ">
+    <div className="card card-bordered bg-gray-200 w-96">
       <figure>
         <img src={project.imageUrl} alt={project.name} />
       </figure>

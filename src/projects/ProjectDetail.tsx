@@ -22,7 +22,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             <h3 className="card-title mb-4 text-base">
               <strong>{project.name}</strong>
             </h3>
-            <p className=" text-gray-500 mb-2">{project.description}</p>
+            <p className=" text-gray-500 mb-4">{project.description}</p>
             <p className=" text-gray-500">
               <span className="text-gray-800 font-semibold">budget: </span>$
               {project.budget.toLocaleString()}
