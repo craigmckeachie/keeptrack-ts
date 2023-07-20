@@ -87,12 +87,12 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
         <form className="  " onSubmit={handleSubmit}>
           {/* {isLoading && <span className="toast">Saving...</span>} */}
 
-          <div className="input-group  input-group-vertical mb-2">
-            <label className="" htmlFor="name">
-              Project Name
+          <div className="form-control mb-2">
+            <label className="label" htmlFor="name">
+              <span className="label-text">Project Name</span>
             </label>
             <input
-              className="form-control input input-lg input-bordered"
+              className="form-control input input-bordered"
               type="text"
               name="name"
               placeholder="enter name"
@@ -106,12 +106,12 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
             )}
           </div>
 
-          <div className="input-group input-group-vertical mb-2">
-            <label className="form-label" htmlFor="description">
-              Project Description
+          <div className="form-control mb-2">
+            <label className="label" htmlFor="description">
+              <span className="label-text">Project Description</span>
             </label>
             <textarea
-              className="form-control input input-bordered input-lg"
+              className="textarea textarea-bordered"
               name="description"
               placeholder="enter description"
               value={project.description}
@@ -123,12 +123,12 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
               </div>
             )}
           </div>
-          <div className="input-group input-group-vertical mb-2 ">
-            <label className="form-label" htmlFor="budget">
-              Project Budget
+          <div className="form-control mb-2">
+            <label className="label" htmlFor="budget">
+              <span className="label-text">Project Budget</span>
             </label>
             <input
-              className="form-control input input-bordered input-lg"
+              className="input input-bordered"
               type="number"
               name="budget"
               placeholder="enter budget"
@@ -141,20 +141,20 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
               </div>
             )}
           </div>
-          <div className="input-group input-group-vertical mb-4">
-            <label className="form-label" htmlFor="isActive">
-              Active?
+          <div className="form-control mb-4">
+            <label className="label " htmlFor="isActive">
+              <span className="label-text">Active?</span>
             </label>
             <input
-              className="form-control checkbox "
+              className="checkbox ml-1"
               type="checkbox"
               name="isActive"
               checked={project.isActive}
               onChange={handleChange}
             />
           </div>
-          {/* <div className="input-group input-group-vertical mb-4">
-            <label className="form-label" htmlFor="contractType">
+          {/* <div className="form-control mb-4">
+            <label className="label" htmlFor="contractType">
               Contract Type
             </label>
             <select className="form-control select" name="contractType">
