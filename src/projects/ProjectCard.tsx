@@ -38,7 +38,7 @@ function ProjectCard(props: ProjectCardProps) {
           <p className="mb-4 text-gray-500">
             {formatDescription(project.description)}
           </p>
-          <p className="mb-2 badge badge-outline p-2 text-gray-500 py-4 ">
+          <p id="budgetParagraph" className="mb-2 badge badge-outline p-2 text-gray-500 py-4 ">
             Budget : $ {project.budget.toLocaleString()}
           </p>
         </Link>
