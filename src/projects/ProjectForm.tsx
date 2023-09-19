@@ -1,27 +1,25 @@
 import React, { SyntheticEvent, useState } from 'react';
 import { Project } from './Project';
+import { useSaveProject } from './projectHooks';
 
 interface ProjectFormProps {
   project: Project;
-  onSave: (project: Project) => void;
   onCancel: () => void;
 }
 
-function ProjectForm({
-  project: initialProject,
-  onSave,
-  onCancel,
-}: ProjectFormProps) {
+function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
   const [project, setProject] = useState(initialProject);
   const [errors, setErrors] = useState({
     name: '',
     description: '',
     budget: '',
   });
+  const { mutate: saveProject, isLoading } = useSaveProject();
+
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
     if (!isValid()) return;
-    onSave(project);
+    saveProject(project);
   };
 
   const handleChange = (event: any) => {
@@ -78,6 +76,7 @@ function ProjectForm({
 
   return (
     <form className="input-group vertical" onSubmit={handleSubmit}>
+      {isLoading && <span className="toast">Saving...</span>}
       <label htmlFor="name">Project Name</label>
       <input
         type="text"
