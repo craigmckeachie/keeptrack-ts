@@ -1,47 +1,64 @@
-import React, { useEffect, useState } from 'react';
-import { Project } from './Project';
-import { projectAPI } from './projectAPI';
-import ProjectList from './ProjectList';
+import React, { useEffect, useState } from "react";
+import { Project } from "./Project";
+import { projectAPI } from "./projectAPI";
+import ProjectList from "./ProjectList";
+import { useQuery, gql } from "@apollo/client";
+
+const GET_ALL_PROJECTS = gql`
+  query GetAllProjects {
+    allProjects {
+      id
+      name
+      description
+      imageUrl
+      budget
+      isActive
+    }
+  }
+`;
 
 function ProjectsPage() {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | undefined>(undefined);
+  // const [projects, setProjects] = useState<Project[]>([]);
+  // const [loading, setLoading] = useState(false);
+  // const [error, setError] = useState<string | undefined>(undefined);
   const [currentPage, setCurrentPage] = useState(1);
 
-  useEffect(() => {
-    async function loadProjects() {
-      setLoading(true);
-      try {
-        const data = await projectAPI.get(currentPage);
-        if (currentPage === 1) {
-          setProjects(data);
-        } else {
-          setProjects((projects) => [...projects, ...data]);
-        }
-      } catch (e) {
-        if (e instanceof Error) {
-          setError(e.message);
-        }
-      } finally {
-        setLoading(false);
-      }
-    }
-    loadProjects();
-  }, [currentPage]);
+  const { loading, error, data } = useQuery(GET_ALL_PROJECTS);
+  console.log(data);
+
+  // useEffect(() => {
+  //   async function loadProjects() {
+  //     setLoading(true);
+  //     try {
+  //       const data = await projectAPI.get(currentPage);
+  //       if (currentPage === 1) {
+  //         setProjects(data);
+  //       } else {
+  //         setProjects((projects) => [...projects, ...data]);
+  //       }
+  //     } catch (e) {
+  //       if (e instanceof Error) {
+  //         setError(e.message);
+  //       }
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   }
+  //   loadProjects();
+  // }, [currentPage]);
 
   const saveProject = (project: Project) => {
-    projectAPI
-      .put(project)
-      .then((updatedProject) => {
-        let updatedProjects = projects.map((p: Project) => {
-          return p.id === project.id ? project : p;
-        });
-        setProjects(updatedProjects);
-      })
-      .catch((e) => {
-        setError(e.message);
-      });
+    // projectAPI
+    //   .put(project)
+    //   .then((updatedProject) => {
+    //     let updatedProjects = projects.map((p: Project) => {
+    //       return p.id === project.id ? project : p;
+    //     });
+    //     setProjects(updatedProjects);
+    //   })
+    //   .catch((e) => {
+    //     setError(e.message);
+    //   });
   };
 
   const handleMoreClick = () => {
@@ -58,14 +75,14 @@ function ProjectsPage() {
             <section>
               <p>
                 <span className="icon-alert inverse "></span>
-                {error}
+                {error.message}
               </p>
             </section>
           </div>
         </div>
       )}
 
-      <ProjectList projects={projects} onSave={saveProject} />
+      <ProjectList projects={data.allProjects} onSave={saveProject} />
 
       {!loading && !error && (
         <div className="row">
